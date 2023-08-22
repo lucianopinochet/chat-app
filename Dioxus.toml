@@ -31,7 +31,7 @@ watch_path = ["src", "public"]
 
 # CSS style file
 
-style = []
+style = ["src/style.css"]
 
 
 # Javascript code file
