@@ -1,0 +1,19 @@
+body{
+  margin: 0;
+}
+.input-chat{
+  /* margin: 5px; */
+  width: 85%;
+}
+form{
+  display: flex;
+  flex-direction: row;
+  position: fixed;
+  bottom: 0;
+  height: 7%;
+  width: 100%;
+  background-color: greenyellow;
+}
+.input-submit{
+  width: 15%;
+}
