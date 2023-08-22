@@ -2,25 +2,12 @@
 
 use dioxus::prelude::*;
 
-#[derive(Props, PartialEq )]
-struct PropApp{
-        name:&'static str
-    }
-pub fn App(cx: Scope) -> Element {
-    cx.render(rsx!(
-<<<<<<< HEAD
-        div{
-            
-        }
-    ))
-=======
-			style {include_str!("./style.css")}
-			SendBar(cx)
-		))
+// #[derive(Props, PartialEq )]
+// struct PropApp{
+//         name:&'static str
+//     }
 
->>>>>>> 505254677c61e7c838107abc2b1b992fadb4bafa
-}
-fn SendBar(cx: Scope) -> Element{
+pub fn SendBar(cx: Scope) -> Element{
 	let message = use_state(cx, || "".to_string());
 
 	cx.render(rsx!(
@@ -42,5 +29,19 @@ fn SendBar(cx: Scope) -> Element{
 					r#type:"submit"
 				}
 			}
+	))
+}
+pub fn Messages<'a>(cx:Scope, messages: Vec<&'a str>) -> Element::<'a>{
+	cx.render(rsx!(
+		for message in messages{
+			Message(cx, message)
+		}
+	))
+}
+fn Message<'a>(cx: Scope, message: &'a str) -> Element::<'a>{
+	cx.render(rsx!(
+		div{
+			class:"message"
+		}
 	))
 }

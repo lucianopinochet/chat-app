@@ -2,9 +2,9 @@
 
 mod components;
 
-use components::App;
+use components::{SendBar, Messages};
 	// use dioxus_router::prelude::*; 
-	// use dioxus::prelude::*;
+use dioxus::prelude::*;
 use dioxus_desktop::{Config, WindowBuilder};
 
 // #[derive(Routable, Clone)]
@@ -24,3 +24,11 @@ async fn main() {
 	);
 }
 
+fn App(cx: Scope) -> Element{
+	let messages = use_ref(cx, || Vec::<&str>::new() ); 
+	cx.render(rsx!(
+		style {include_str!("./style.css")}
+		Messages(cx, messages.read().to_vec())
+		SendBar(cx)
+	))
+}
