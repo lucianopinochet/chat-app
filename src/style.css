@@ -17,3 +17,16 @@ form{
 .input-submit{
   width: 15%;
 }
+.messages{
+  display: flex;
+  flex-direction: column;
+}
+.message{
+  /* text-align: center; */
+  justify-content: center;
+  background-color: #555;
+  border: 1px solid black;
+  height: 25px;
+  font-size: 20px;
+  padding-left: 5px;
+}
