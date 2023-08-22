@@ -12,13 +12,8 @@ pub fn App(cx: Scope) -> Element {
 }
 fn Greet(cx:Scope<PropApp>) -> Element{
     cx.render(rsx!(
-        p{
-            onclick: move |event|{
-               log::info!("Clicked! Event {event:?}");
-               println!("{event:?}")
-                
-            },
-            "Hello, {cx.props.name}"
+        div{
+            
         }
     ))
 }
