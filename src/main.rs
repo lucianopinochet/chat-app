@@ -3,15 +3,8 @@
 mod components;
 
 use components::App;
-	// use dioxus_router::prelude::*; 
-// use dioxus::prelude::*;
 use dioxus_desktop::{Config, WindowBuilder};
 
-// #[derive(Routable, Clone)]
-// enum Route{
-// 	#[route("/login")]
-// 	App{}
-// }
 #[tokio::main]
 async fn main() {
   dioxus_desktop::launch_cfg(
